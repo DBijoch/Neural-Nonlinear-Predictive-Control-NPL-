@@ -42,7 +42,7 @@ W projekcie zbadano wpływ architektury sieci oraz algorytmu uczenia na jakość
 * Model ELM okazał się najefektywniejszy obliczeniowo przy zachowaniu najwyższej dokładności dla tego konkretnego obiektu.
 
 ## 🚀 Algorytm Sterowania: NPL
-Zaimplementowano algorytm **NPL**, który stanowi wydajną obliczeniowo alternatywę dla klasycznego NMPC. Algorytm unika kosztownej optymalizacji nieliniowej online poprzez linearyzację modelu neuronowego wzdłuż trajektorii predykcji. Testy wykazały wysoką skuteczność regulacji niezależnie od punktu pracy, z najlepszymi wynikami dla modelu ELM.
+Zaimplementowano algorytm **NPL**, który stanowi wydajną obliczeniowo alternatywę dla klasycznego NMPC. Algorytm unika kosztownej optymalizacji nieliniowej online poprzez linearyzację modelu neuronowego wzdłuż trajektorii predykcji.
 
 **Zasada działania:**
 1. **Predykcja swobodna:** Wyznaczana na pełny horyzont na podstawie nieliniowego modelu neuronowego (ELM lub Hybrydowego).
@@ -52,6 +52,15 @@ Zaimplementowano algorytm **NPL**, który stanowi wydajną obliczeniowo alternat
 $$\Delta \mathbf{U} = (\mathbf{M}^T \mathbf{M} + \lambda \mathbf{I})^{-1} \mathbf{M}^T (\mathbf{Y}_{zad} - \mathbf{Y}^0)$$
 
 Gdzie $\mathbf{Y}^0$ to trajektoria swobodna wyznaczona przez sieć neuronową.
+
+**Wyniki regulacji:**
+* Testy wykazały bardzo wysoką skuteczność regulacji niezależnie od punktu pracy.
+* Najlepsze wyniki uzyskano dla modelu ELM.
+
+---
+> 📊 **Szczegółowe wyniki, wykresy oraz porównania znajdują się w sprawozdaniu [docs/Sprawozdanie.pdf](docs/Sprawozdanie.pdf).**
+
+---
 
 ## 📂 Struktura Repozytorium
 
